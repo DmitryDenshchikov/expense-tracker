@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Track Expense</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="submit-expense.js" defer></script>
+</head>
+<body>
+<form id="expenseSubmissionForm">
+	<button type="submit" class="btn-large">Track Expense</button>
+	<br>
+	<input type="number" id="amount" name="amount" placeholder="Amount" required><br>
+	<input type="text" id="description" name="description" placeholder="Description (Optional)"><br>
+	<select id="category" name="category" required>
+		<option value="" disabled selected hidden>Select Category</option>
+		<option value="FOOD">FOOD</option>
+		<option value="SPORT">SPORT</option>
+		<option value="TRANSPORT">TRANSPORT</option>
+		<option value="LEISURE">LEISURE</option>
+	</select><br>
+</form>
+</body>
+</html>
