@@ -3,6 +3,7 @@ package denshchikov.dmitry.controller
 import denshchikov.dmitry.mapper.ExpenseMapper
 import denshchikov.dmitry.model.domain.Expense
 import denshchikov.dmitry.model.input.CreateExpenseRequest
+import jakarta.validation.Valid
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder
@@ -16,7 +17,7 @@ class ExpenseController(
 ) {
 
     @PostMapping
-    fun createTask(@RequestBody request: CreateExpenseRequest): ResponseEntity<Expense> {
+    fun createTask(@Valid @RequestBody request: CreateExpenseRequest): ResponseEntity<Expense> {
         val domain = expenseMapper.toDomain(request)
         expenseStorage[domain.id] = domain
 
